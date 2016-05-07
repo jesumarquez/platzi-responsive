@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mi página</title>
+    <link rel="stylesheet" href="./css/main.css" type="text/css" />
+</head>
+<body>
+    
+    <header class="header">
+        <div class="header-mobile">
+            <h1 class="header-logo">Logo</h1>
+            <button id="btnMenu" class="header-btn-nav">Menu</button>
+        </div>
+        <nav class="header-menu-navbar">
+            <ul id="navBarMenu" class="header-menu-list">
+                <li class="header-menu-list-item">
+                    <a href="#">Inicio</a>
+                </li>
+                <li class="header-menu-list-item">
+                    <a href="#">Acerca de</a>
+                </li>
+                <li class="header-menu-list-item">
+                    <a href="#">Blog</a>
+                </li>
+                <li class="header-menu-list-item">
+                    <a href="#">Contacto</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+    
+    <article class="content">
+        <section class="content-text">
+            <div class="video-container">
+                <iframe 
+                    width="560" 
+                    height="315" 
+                    src="https://www.youtube.com/embed/V2VToIDHWIw" 
+                    frameborder="0" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </section>
+    </article>
+    
+    <script>
+        (function(){
+            var btnMenu = document.getElementById('btnMenu');
+            var navBarMenu = document.getElementById('navBarMenu');
+
+            btnMenu.addEventListener('click', onClickMenu);
+            
+            function onClickMenu(){
+                navBarMenu.classList.toggle('header-menu-list--show');
+            }
+        }());
+    </script>
+    
+</body>
+</html>
